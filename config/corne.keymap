@@ -140,10 +140,10 @@
 
         default_layer {
             bindings = <
-&kp ESC           &kp Q  &kp W  &kp F        &kp P  &kp B        &kp J    &kp L  &kp U          &kp Y      &kp BACKSPACE  &kp DEL
-&kp LEFT_GUI      &kp A  &kp R  &kp S        &kp T  &kp G        &kp M    &kp N  &kp E          &kp I      &kp O          &kp TAB
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C        &kp D  &kp V        &kp K    &kp H  &comma_qmark   &dot_excl  &kp MINUS      &kp SINGLE_QUOTE
-                                &shift_caps  &mo 2  &kp SPACE    &kp RET  &mo 1  &kp RIGHT_ALT
+&kp ESC           &kp Q  &kp W  &kp F        &kp P      &kp B    &kp J  &kp L      &kp U          &kp Y      &kp BACKSPACE  &kp DEL
+&kp LEFT_GUI      &kp A  &kp R  &kp S        &kp T      &kp G    &kp M  &kp N      &kp E          &kp I      &kp O          &kp TAB
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C        &kp D      &kp V    &kp K  &kp H      &comma_qmark   &dot_excl  &kp MINUS      &kp SINGLE_QUOTE
+                                &shift_caps  &kp SPACE  &mo 1    &mo 2  &kp ENTER  &kp RIGHT_ALT
             >;
         };
 
@@ -161,7 +161,7 @@
 &kp F1  &kp F2  &kp F3    &kp F4      &kp F5      &kp F6             &kp F7    &kp F8    &kp F9         &kp F10    &kp F11  &kp F12
 &trans  &none   &kp HOME  &kp PG_UP   &kp PG_DN   &kp END            &kp LEFT  &kp DOWN  &kp UP         &kp RIGHT  &trans   &trans
 &trans  &none   &none     &desktop_2  &desktop_1  &kp PRINTSCREEN    &none     &none     &none          &none      &trans   &tab_prev
-                          &trans      &mo 3       &trans             &trans    &trans    &kp RIGHT_ALT
+                          &trans      &trans      &mo 3              &trans    &trans    &kp RIGHT_ALT
             >;
         };
 
