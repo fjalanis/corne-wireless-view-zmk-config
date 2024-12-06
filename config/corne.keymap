@@ -22,7 +22,7 @@
         plus_equal: plus_equal {
             compatible = "zmk,behavior-mod-morph";
             label = "PLUS_EQUAL";
-            #binding-cells = <0>ts
+            #binding-cells = <0>;
             bindings = <&kp PLUS>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
