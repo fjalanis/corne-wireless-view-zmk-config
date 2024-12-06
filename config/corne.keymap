@@ -30,7 +30,7 @@
         semi_colon_combo: semi_colon_combo {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMI_COLON_COMBO";
-            e#binding-cells = <0>;
+            #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
