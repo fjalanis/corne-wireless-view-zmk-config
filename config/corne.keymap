@@ -23,7 +23,7 @@
         plus_equal: plus_equal {
             compatible = "zmk,behavior-mod-morph";
             label = "PLUS_EQUAL";
-            #binding-cells = <0>;
+            #binding-cells = <0>ts
             bindings = <&kp PLUS>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -31,7 +31,7 @@
         semi_colon_combo: semi_colon_combo {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMI_COLON_COMBO";
-            #binding-cells = <0>;
+            e#binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -123,7 +123,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        querty_layer {
+        qwerty_layer {
             bindings = <
 &kp ESC           &kp Q  &kp W  &kp E        &kp R      &kp T    &kp Y  &kp U      &kp I          &kp O      &kp P          &kp TAB
 &kp LEFT_GUI      &kp A  &kp S  &kp D        &kp F      &kp G    &kp H  &kp J      &kp K          &kp L      &kp BACKSPACE  &kp DEL
@@ -134,8 +134,8 @@
 
         navnum_layer {
             bindings = <
-&trans         &none      &kp INSERT        &desktop_1       &desktop_2    &kp PRINTSCREEN  &kp SLASH  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp EQUAL   &none
-&trans         &none      &kp LEFT_ARROW    &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &kp STAR   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp PLUS    &none
+&trans         &none      &none             &desktop_1       &desktop_2    &kp PRINTSCREEN  &kp SLASH  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp EQUAL   &none
+&trans         &none      &kp LEFT_ARROW    &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &kp STAR   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp PLUS    &kp INSERT
 &trans         &none      &kp HOME          &kp PG_UP        &kp PG_DN     &kp END          &kp MINUS  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp ENTER   &none
                                             &kp LEFT_ALT     &trans        &none            &mo 3      &trans  &kp KP_N0 
             >;
@@ -143,17 +143,16 @@
 
         numsym_layer {
             bindings = <
-&trans         &kp PIPE         &kp AT            &kp HASH            &kp DLLR          &kp PERCENT      &kp CARET          &kp AMPERSAND     &kp STAR              &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp PLUS
+&trans         &none            &kp AT            &kp HASH            &kp DLLR          &kp PERCENT      &kp CARET          &kp AMPERSAND     &kp STAR              &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp PLUS
 &trans         &kp NUMBER_1     &kp NUMBER_2      &kp NUMBER_3        &kp NUMBER_4      &kp NUMBER_5     &kp NUMBER_6       &kp NUMBER_7      &kp NUMBER_8          &kp NUMBER_9           &kp NUMBER_0           &kp EQUAL
-&trans         &kp BACKSLASH    &kp TILDE         &kp GRAVE           &kp SLASH         &none            &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp LESS_THAN         &kp GREATER_THAN       &kp LEFT_BRACKET       &kp RIGHT_BRACKET  
-                                                  &trans              &none             &none            &none              &none             &none
+&trans         &kp BACKSLASH    &kp TILDE         &kp GRAVE           &kp SLASH         &kp PIPE         &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp LESS_THAN         &kp GREATER_THAN       &kp LEFT_BRACKET       &kp RIGHT_BRACKET  
             >;
         };
 
         controls_layer {
             bindings = <
 &kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6           &kp F7    &kp F8    &kp F9         &kp F10     &kp F11   &kp F12
-&kp C_POWER  &ctrl_alt_del &kp C_SLEEP   &kp C_VOL_UP  &kp C_VOL_DN  &tog 4           &none     &none     &none          &none       &none     &none
+&kp C_POWER  &ctrl_alt_del &kp C_SLEEP   &kp C_VOL_DN  &kp C_VOL_UP  &none            &none     &none     &none          &none       &none     &none
 &bootloader  &sys_reset    &none         &kp C_PREV    &kp C_NEXT    &none            &none     &none     &none          &none       &none     &none
                                          &trans        &none         &none            &none     &none     &none
             >;
@@ -169,3 +168,4 @@
         };
     };
 };
+
