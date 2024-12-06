@@ -158,6 +158,7 @@
             >;
         };
 
+/*
         colemak_layer {
             bindings = <
 &kp ESC           &kp Q  &kp W  &kp F        &kp P      &kp B    &kp J  &kp L      &kp U          &kp Y      &kp BACKSPACE  &kp DEL
@@ -166,6 +167,7 @@
                                 &shift_caps  &kp SPACE  &mo 1    &mo 2  &kp ENTER  &kp RIGHT_ALT
             >;
         };
+*/
     };
 };
 
