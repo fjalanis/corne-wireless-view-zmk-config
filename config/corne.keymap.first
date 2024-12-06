@@ -84,20 +84,6 @@
                 <&kp LGUI>;
         };
 
-
-        desktop_2: desktop_2 {
-            compatible = "zmk,behavior-macro";
-            label = "DESKTOP_2";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp KP_N2>,
-                <&macro_release>,
-                <&kp LGUI>;
-        };
-
         tab_prev: tab_next {
             label = "TAB_NEXT";
             compatible = "zmk,behavior-macro";
@@ -124,42 +110,31 @@
                 <&kp LCTRL &kp LALT>;
         };
 
+        desktop_2: desktop_2 {
+            compatible = "zmk,behavior-macro";
+            label = "DESKTOP_2";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp KP_N2>,
+                <&macro_release>,
+                <&kp LGUI>;
+        };
+
         caps_word_toggle: caps_word_toggle {
             label = "CAPS_WORD_TOGGLE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&caps_word>;
         };
-
-        // Lowercase accented vowels
-        ZMK_UNICODE_SINGLE(a_lower_accent, N0, N0,  E, N1)    // á (00E1)
-        ZMK_UNICODE_SINGLE(e_lower_accent, N0, N0,  E, N9)    // é (00E9)
-        ZMK_UNICODE_SINGLE(i_lower_accent, N0, N0,  E, D)     // í (00ED)
-        ZMK_UNICODE_SINGLE(o_lower_accent, N0, N0,  F, N3)    // ó (00F3)
-        ZMK_UNICODE_SINGLE(u_lower_accent, N0, N0,  F, A)     // ú (00FA)
-
-        // Uppercase accented vowels
-        ZMK_UNICODE_SINGLE(a_upper_accent, N0, N0,  C, N1)    // Á (00C1)
-        ZMK_UNICODE_SINGLE(e_upper_accent, N0, N0,  C, N9)    // É (00C9)
-        ZMK_UNICODE_SINGLE(i_upper_accent, N0, N0,  C, D)     // Í (00CD)
-        ZMK_UNICODE_SINGLE(o_upper_accent, N0, N0,  D, N3)    // Ó (00D3)
-        ZMK_UNICODE_SINGLE(u_upper_accent, N0, N0,  D, A)     // Ú (00DA)
-
-        // Ñ/ñ
-        ZMK_UNICODE_SINGLE(n_lower_tilde, N0, N0,  F, N1)     // ñ (00F1)
-        ZMK_UNICODE_SINGLE(n_upper_tilde, N0, N0,  D, N1)     // Ñ (00D1)
-
-        // Ü/ü
-        ZMK_UNICODE_SINGLE(u_lower_umlaut, N0, N0,  F, C)     // ü (00FC)
-        ZMK_UNICODE_SINGLE(u_upper_umlaut, N0, N0,  D, C)     // Ü (00DC)
-
-
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        querty_layer {
+        default_layer {
             bindings = <
 &kp ESC           &kp Q  &kp W  &kp E        &kp R      &kp T    &kp Y  &kp U      &kp I          &kp O      &kp P          &kp TAB
 &kp LEFT_GUI      &kp A  &kp S  &kp D        &kp F      &kp G    &kp H  &kp J      &kp K          &kp L      &kp BACKSPACE  &kp DEL
@@ -168,30 +143,30 @@
             >;
         };
 
-        navnum_layer {
+        symnum_layer {
             bindings = <
-&trans         &none      &kp INSERT        &desktop_1       &desktop_2    &kp PRCNT        &kp SLASH  &kp N7  &kp N8  &kp N9  &kp EQUAL   &tab_prev
-&trans         &none      &kp HOME          &kp PG_UP        &kp PG_DN     &kp END          &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS    &none
-&trans         &none      &kp LEFT_ARROW    &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &kp MINUS  &kp N1  &kp N2  &kp N3  &kp ENTER   &none
-                                            &kp LEFT_ALT     &trans        &none            &mo 3      &trans  &kp N0 
+&kp TILDE      &kp GRAVE  &kp AT            &kp HASH  &kp DLLR  &kp PRCNT    &kp STAR   &kp N7  &kp N8  &kp N9  &trans       &trans
+&kp CARET      &kp AMPS   &kp LESS_THAN     &kp LPAR  &kp LBRC  &kp LBKT     &kp SLASH  &kp N4  &kp N5  &kp N6  &plus_equal  &trans
+&kp BACKSLASH  &kp PIPE   &kp GREATER_THAN  &kp RPAR  &kp RBRC  &kp RBKT     &kp DOT    &kp N1  &kp N2  &kp N3  &trans       &trans
+                                            &none     &trans    &trans       &trans     &trans  &kp N0
             >;
         };
 
-        numsym_layer {
+        nav_layer {
             bindings = <
-&trans         &kp PIPE         &kp AT            &kp HASH            &kp DLLR          &kp PERCENT      &kp CARET          &kp AMPERSAND     &kp STAR              &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp PLUS
-&trans         &kp NUMBER_1     &kp NUMBER_2      &kp NUMBER_3        &kp NUMBER_4      &kp NUMBER_5     &kp NUMBER_6       &kp NUMBER_7      &kp NUMBER_8          &kp NUMBER_9           &kp NUMBER_0           &kp EQUAL
-&trans         &kp BACKSLASH    &kp TILDE         &kp GRAVE           &kp SLASH         &none            &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp LESS_THAN         &kp GREATER_THAN       &kp LEFT_BRACKET       &kp RIGHT_BRACKET  
-                                                  &trans              &none             &none            &none              &none             &none
+&kp F1  &kp F2  &kp F3    &kp F4      &kp F5      &kp F6             &kp F7    &kp F8    &kp F9         &kp F10    &kp F11  &kp F12
+&trans  &none   &kp HOME  &kp PG_UP   &kp PG_DN   &kp END            &kp LEFT  &kp DOWN  &kp UP         &kp RIGHT  &trans   &trans
+&trans  &none   &none     &desktop_2  &desktop_1  &kp PRINTSCREEN    &none     &none     &none          &none      &trans   &tab_prev
+                          &trans      &trans      &mo 3              &trans    &trans    &kp RIGHT_ALT
             >;
         };
 
         controls_layer {
             bindings = <
-&kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6           &kp F7    &kp F8    &kp F9         &kp F10     &kp F11   &kp F12
-&kp C_POWER  &ctrl_alt_del &kp C_SLEEP   &kp C_VOL_UP  &kp C_VOL_DN  &tog 4           &none     &none     &none          &none       &none     &none
-&bootloader  &sys_reset    &none         &none         &none         &none            &none     &none     &none          &none       &none     &none
-                                         &trans        &none         &none            &none     &none     &none
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &none  &kp C_PREV    &kp C_NEXT       &none          &none                 &none
+&kp C_SLEEP  &kp C_POWER   &none         &none         &none         &tog 4           &none  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC  &none
+&bootloader  &sys_reset    &none         &none         &none         &none            &none  &none         &none            &none          &none                 &none
+                                         &trans        &none         &ctrl_alt_del    &none  &none         &none
             >;
         };
 
