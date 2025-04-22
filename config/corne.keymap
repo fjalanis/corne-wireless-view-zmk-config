@@ -77,7 +77,7 @@
     };
 
     macros {
-        desktop_1: desktop_1 {
+        desktop1: desktop1 {
             label = "DESKTOP_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -90,7 +90,7 @@
                 <&kp LGUI>;
         };
 
-        desktop_2: desktop_2 {
+        desktop2: desktop2 {
             compatible = "zmk,behavior-macro";
             label = "DESKTOP_2";
             #binding-cells = <0>;
@@ -127,54 +127,54 @@
         /*********/
         // Application launcher macros using Ctrl+Alt+Super+Number combinations
         files: files {
-            label: "FILES";
-            compatible: "zmk,behavior-macro";
+            label = "FILES";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LA(LG(N1)))>;  // Ctrl+Alt+Super+1
         };
 
         term: term {
-            label: "TERMINAL";
-            compatible: "zmk,behavior-macro";
+            label = "TERMINAL";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LA(LG(N2)))>;  // Ctrl+Alt+Super+2
         };
 
         ide: ide {
-            label: "IDE";
-            compatible: "zmk,behavior-macro";
+            label = "IDE";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LA(LG(N3)))>;  // Ctrl+Alt+Super+3
         };
 
         notes: notes {
-            label: "NOTES";
-            compatible: "zmk,behavior-macro";
+            label = "NOTES";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LA(LG(N4)))>;  // Ctrl+Alt+Super+4
         };
 
         browsera: browsera {
-            label: "BROWSER_A";
-            compatible: "zmk,behavior-macro";
+            label = "BROWSER_A";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LA(LG(N5)))>;  // Ctrl+Alt+Super+5
         };
 
         browserb: browserb {
-            label: "BROWSER_B";
-            compatible: "zmk,behavior-macro";
+            label = "BROWSER_B";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LA(LG(N6)))>;  // Ctrl+Alt+Super+6
         };
 
         browserc: browserc {
-            label: "BROWSER_C";
-            compatible: "zmk,behavior-macro";
+            label = "BROWSER_C";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LA(LG(N7)))>;  // Ctrl+Alt+Super+7
         };
-        
+
     };
 
     keymap {
@@ -192,9 +192,9 @@
         syms_layer {
             bindings = <
 &kp F1     &kp F2             &kp F3        &kp F4        &kp F5        &kp F6           &kp F7          &kp F8           &kp F9         &kp F10               &kp F11                &kp F12
-&files     &term              &ide          &notes        &desktop_1    &kp LGUI         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LESS_THAN  &kp GREATER_THAN      &kp LEFT_BRACKET       &kp RIGHT_BRACKET
-&trans     &browsera          &browserb     &browserc     &desktop_2    &kp PRINTSCREEN  &none           &none            &none          &none                 &kp BACKSLASH          &kp SLASH
-                                            &trans        &none         &trans           &mo 3           &RIGHT_SHIFT     &trans
+&files     &term              &ide          &notes        &desktop1    &kp LGUI         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LESS_THAN  &kp GREATER_THAN      &kp LEFT_BRACKET       &kp RIGHT_BRACKET
+&trans     &browsera          &browserb     &browserc     &desktop2    &kp PRINTSCREEN  &none           &none            &none          &none                 &kp BACKSLASH          &kp SLASH
+                                            &trans        &none         &trans           &mo 3           &kp RIGHT_SHIFT     &trans
             >;
         };
 
@@ -228,6 +228,3 @@
 */
     };
 };
-
-desktop_1
-desktop_2
