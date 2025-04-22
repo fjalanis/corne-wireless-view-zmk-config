@@ -164,19 +164,6 @@
                 <&kp LSHFT &kp LALT>;
         };
 
-        alt_tab: alt_tab {
-            label = "ALT_TAB";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LALT>;
-        };
-
         gui_tab: gui_tab {
             label = "GUI_TAB";
             compatible = "zmk,behavior-macro";
@@ -190,17 +177,30 @@
                 <&kp LGUI>;
         };
 
-        gui_grave: gui_grave {
-            label = "GUI_GRAVE";
+        alt_tab: alt_tab {
+            label = "ALT_TAB";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LGUI>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        alt_grave: alt_grave {
+            label = "ALT_GRAVE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
                 <&macro_tap>,
                 <&kp GRAVE>,
                 <&macro_release>,
-                <&kp LGUI>;
+                <&kp LALT>;
         };
 
 
