@@ -124,56 +124,177 @@
         };
 
 
-        /*********/
+        // Windows/Apps key combos
+        shift_gui_tab: shift_gui_tab {
+            label = "SHIFT_GUI_TAB";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT &kp LGUI>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LSHFT &kp LGUI>;
+        };
+
+        shift_alt_tab: shift_alt_tab {
+            label = "SHIFT_ALT_TAB";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT &kp LALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LSHFT &kp LALT>;
+        };
+
+        shift_alt_grave: shift_alt_grave {
+            label = "SHIFT_ALT_GRAVE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT &kp LALT>,
+                <&macro_tap>,
+                <&kp GRAVE>,
+                <&macro_release>,
+                <&kp LSHFT &kp LALT>;
+        };
+
+        alt_tab: alt_tab {
+            label = "ALT_TAB";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        gui_tab: gui_tab {
+            label = "GUI_TAB";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LGUI>;
+        };
+
+        gui_grave: gui_grave {
+            label = "GUI_GRAVE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp GRAVE>,
+                <&macro_release>,
+                <&kp LGUI>;
+        };
+
+
         // Application launcher macros using Ctrl+Alt+Super+Number combinations
         files: files {
             label = "FILES";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LG(N1)))>;  // Ctrl+Alt+Super+1
+            bindings = 
+                <&macro_press>,
+                <&kp LCTRL &kp LALT &kp LGUI>,
+                <&macro_tap>,
+                <&kp N1>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT &kp LGUI>;
         };
 
         term: term {
             label = "TERMINAL";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LG(N2)))>;  // Ctrl+Alt+Super+2
+            bindings = 
+                <&macro_press>,
+                <&kp LCTRL &kp LALT &kp LGUI>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT &kp LGUI>;
         };
 
         ide: ide {
             label = "IDE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LG(N3)))>;  // Ctrl+Alt+Super+3
+            bindings = 
+                <&macro_press>,
+                <&kp LCTRL &kp LALT &kp LGUI>,
+                <&macro_tap>,
+                <&kp N3>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT &kp LGUI>;
         };
 
         notes: notes {
             label = "NOTES";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LG(N4)))>;  // Ctrl+Alt+Super+4
+            bindings = 
+                <&macro_press>,
+                <&kp LCTRL &kp LALT &kp LGUI>,
+                <&macro_tap>,
+                <&kp N4>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT &kp LGUI>;
         };
 
         browsera: browsera {
             label = "BROWSER_A";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LG(N5)))>;  // Ctrl+Alt+Super+5
+            bindings = 
+                <&macro_press>,
+                <&kp LCTRL &kp LALT &kp LGUI>,
+                <&macro_tap>,
+                <&kp N5>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT &kp LGUI>;
         };
 
         browserb: browserb {
             label = "BROWSER_B";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LG(N6)))>;  // Ctrl+Alt+Super+6
+            bindings = 
+                <&macro_press>,
+                <&kp LCTRL &kp LALT &kp LGUI>,
+                <&macro_tap>,
+                <&kp N6>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT &kp LGUI>;
         };
 
         browserc: browserc {
             label = "BROWSER_C";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LG(N7)))>;  // Ctrl+Alt+Super+7
-        };
+            bindings = 
+                <&macro_press>,
+                <&kp LCTRL &kp LALT &kp LGUI>,
+                <&macro_tap>,
+                <&kp N7>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT &kp LGUI>;
+        };  
 
     };
 
@@ -192,18 +313,18 @@
         syms_layer {
             bindings = <
 &kp F1     &kp F2             &kp F3        &kp F4        &kp F5        &kp F6           &kp F7          &kp F8           &kp F9         &kp F10               &kp F11                &kp F12
-&files     &term              &ide          &notes        &desktop1    &kp LGUI         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LESS_THAN  &kp GREATER_THAN      &kp LEFT_BRACKET       &kp RIGHT_BRACKET
-&trans     &browsera          &browserb     &browserc     &desktop2    &kp PRINTSCREEN  &none           &none            &none          &none                 &kp BACKSLASH          &kp SLASH
+&files     &term              &ide          &notes        &none         &kp LGUI         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LESS_THAN  &kp GREATER_THAN      &kp LEFT_BRACKET       &kp RIGHT_BRACKET
+&trans     &browsera          &browserb     &browserc     &none         &kp PRINTSCREEN  &none           &none            &none          &none                 &kp BACKSLASH          &kp SLASH
                                             &trans        &none         &trans           &mo 3           &kp RIGHT_SHIFT     &trans
             >;
         };
 
         navnum_layer {
             bindings = <
-&kp GRAVE   &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3   &kp NUMBER_4     &kp NUMBER_5       &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp EQUAL
-&none       &kp LS(LG(TAB))  &kp LS(LA(TAB))  &kp LA(TAB)    &kp LG(TAB)      &none              &kp HOME      &kp LEFT      &kp UP        &kp DOWN      &kp RIGHT     &kp END
-&trans      &none            &none            &none          &none            &none              &kp LC(HOME)  &kp LC(LEFT)  &kp PG_UP     &kp PG_DN     &kp LC(RIGHT) &kp LC(END)
-                             &trans           &kp LEFT_ALT   &mo 5            &trans             &none         &none
+&kp GRAVE   &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3      &kp NUMBER_4     &kp NUMBER_5       &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp EQUAL
+&desktop2   &desktop2        &shift_gui_tab   &shift_alt_grave  &alt_grave       &gui_tab           &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp HOME      &kp END
+&trans      &none            &none            &shift_alt_tab    &alt_tab         &none              &kp LC(LEFT)  &kp PG_DN     &kp PG_UP     &kp LC(RIGHT) &kp LC(HOME)  &kp LC(END)
+                             &trans           &kp LEFT_ALT      &mo 4            &trans             &none         &none
             >;
         };
 
